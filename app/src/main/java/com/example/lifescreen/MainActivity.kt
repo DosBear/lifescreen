@@ -6,7 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,7 +38,15 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             Column {
+                TopAppBar {
+                    IconButton(onClick = {
+                        
 
+                    }) {
+                        Icon(Icons.Filled.Menu, contentDescription = "Меню")
+                    }
+                    Text("Жизнь в неделях", fontSize = 22.sp)
+                }
                 LazyColumn(
                     modifier = Modifier.fillMaxWidth()
                 ) {
